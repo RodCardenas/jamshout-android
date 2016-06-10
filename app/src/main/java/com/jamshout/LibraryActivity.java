@@ -11,15 +11,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
+public class LibraryActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_library);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.nav_library) {
-            Intent myIntent = new Intent(MainActivity.this, LibraryActivity.class);
-            MainActivity.this.startActivity(myIntent);
+        if (id == R.id.nav_home) {
+            Intent myIntent = new Intent(LibraryActivity.this, MainActivity.class);
+            LibraryActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_favorite) {
 
