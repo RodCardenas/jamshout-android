@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -51,11 +52,15 @@ public class MainActivity extends AppCompatActivity
             MainActivity.this.startActivity(myIntent);
 
         } else if (id == R.id.nav_favorite) {
+            Toast.makeText(MainActivity.this, "See your favorites!",
+                    Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_manage) {
-
+            Toast.makeText(MainActivity.this, "Change your settings!",
+                    Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_share) {
-
+            Toast.makeText(MainActivity.this, "Tell the world!",
+                    Toast.LENGTH_LONG).show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
